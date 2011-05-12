@@ -34,7 +34,7 @@ public class Person implements Serializable {
   private long id;
   private String name;
   private Date birthday;
-  private String gender;
+  private String genderSymbol;
 
   public Person() {
     super();
@@ -44,7 +44,7 @@ public class Person implements Serializable {
     super();
     this.name = name;
     this.birthday = birthday;
-    this.gender = gender.toString();
+    this.genderSymbol = gender.toString();
   }
 
   public Date getBirthday() {
@@ -53,7 +53,7 @@ public class Person implements Serializable {
 
   @Transient
   public Gender getGender() {
-    return Gender.fromString(getGenderData());
+    return Gender.fromString(getGenderSymbol());
   }
 
   @Id
@@ -71,7 +71,7 @@ public class Person implements Serializable {
   }
 
   public void setGender(final Gender gender) {
-    setGenderData(gender.toString());
+    setGenderSymbol(gender.toString());
   }
 
   public void setId(final long id) {
@@ -88,11 +88,11 @@ public class Person implements Serializable {
         + ", gender=" + getGender() + "]";
   }
 
-  protected String getGenderData() {
-    return this.gender;
+  protected String getGenderSymbol() {
+    return this.genderSymbol;
   }
 
-  protected void setGenderData(final String string) {
-    this.gender = string;
+  protected void setGenderSymbol(final String genderSymbol) {
+    this.genderSymbol = genderSymbol;
   }
 }
