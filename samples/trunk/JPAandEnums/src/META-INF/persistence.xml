@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="JpaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <class>de.wirkfunktion.samples.jpa.domain.Person</class>
+    <properties>
+      <property name="openjpa.ConnectionDriverName"     value="org.apache.derby.jdbc.EmbeddedDriver" />
+      <property name="openjpa.ConnectionURL"            value="jdbc:derby:./rdb/derby;create=true" />
+      <property name="openjpa.ConnectionUserName"       value="" />
+      <property name="openjpa.ConnectionPassword"       value="" />
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" />         	  
+    </properties>
+  </persistence-unit>
+</persistence>
