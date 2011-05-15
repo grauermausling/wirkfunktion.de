@@ -20,6 +20,7 @@ package de.wirkfunktion.samples.jpa.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -88,6 +89,7 @@ public class Person implements Serializable {
         + ", gender=" + getGender() + "]";
   }
 
+  @Column(name = "GENDER")
   protected String getGenderSymbol() {
     return this.genderSymbol;
   }

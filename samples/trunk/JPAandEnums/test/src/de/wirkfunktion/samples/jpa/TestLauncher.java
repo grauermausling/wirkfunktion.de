@@ -27,10 +27,7 @@ import javax.persistence.Persistence;
 import de.wirkfunktion.samples.jpa.domain.Gender;
 import de.wirkfunktion.samples.jpa.domain.Person;
 
-/**
- * @author alexander
- *
- */
+
 public class TestLauncher {
 
   public static void main(final String[] args) {
@@ -46,18 +43,18 @@ public class TestLauncher {
       tx.begin();
       em.persist(entity);
       tx.commit();
-    } catch (final RuntimeException ex) {
+    } catch (final RuntimeException e) {
       if (tx != null && tx.isActive()) tx.rollback();
-      throw ex;
+      throw e;
     } finally {
       em.close();
     }
   }
 
-  public <T> T readEntity(final Class<T> clss, final Object id) {
+  public <T> T readEntity(final Class<T> clazz, final Object id) {
     final EntityManager em = this.emf.createEntityManager();
     try {
-      return em.find(clss, id);
+      return em.find(clazz, id);
     } finally {
       em.close();
     }
@@ -70,7 +67,7 @@ public class TestLauncher {
 
       createEntity(willy);
       final Object id = willy.getId();
-
+      
       System.out.println("\nJPA Entity: " + readEntity(Person.class, id));
     } finally {
       if (this.emf != null) this.emf.close();
