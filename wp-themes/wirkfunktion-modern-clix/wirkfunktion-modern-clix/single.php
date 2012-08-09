@@ -35,8 +35,8 @@
 
 	<?php else : ?>
 	
-		<h3>Post Not Found</h3>
-		<p>Sorry, but you are looking for something that isn't here.</p>
+		<h3>Ups?!</h3>
+		<p>Tut mir leid, aber diesen Artikel gibt es hier nicht.</p>
 	
 	<?php endif; ?>
 	

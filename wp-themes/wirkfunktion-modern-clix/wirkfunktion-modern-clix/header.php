@@ -18,13 +18,11 @@
 	<div id="wrapper">
 		<div id="main-nav" class="col span-12">
 			<ul>
-        <li 
-          class="page_item page-item-2 <?php if(is_home()){echo 'current_page_item';}?>">
-          <a href="<?php bloginfo('siteurl'); ?>" title="Home">Home</a>
-        </li>        
-        <?php wp_list_pages('&title_li='); ?>
-	<!-- Spendenaktion -->
-	<li><a href="http://sascha.wirkfunktion.de" style="background-color: #FFFF66;">Aktion: Spendenaufruf!</a></li>
+				<li 
+				  class="page_item page-item-2 <?php if(is_home()){echo 'current_page_item';}?>">
+				  <a href="<?php bloginfo('siteurl'); ?>" title="Home">Home</a>
+				</li>        
+				<?php wp_list_pages('&title_li='); ?>
 			</ul>			
 		</div>		
 		

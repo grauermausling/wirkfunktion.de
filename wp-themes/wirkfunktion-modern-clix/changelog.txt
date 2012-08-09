@@ -1,5 +1,4 @@
-MODERN CLIX 1.1 CHANGELOG
--------------------------
+WIRKFUNKTION MODERN CLIX 0.1 CHANGELOG
+--------------------------------------
 
-1.1 Removed META tags in header.php
-1.0 Initial Release
+0.1 Forked from Modern Clix 1.1
