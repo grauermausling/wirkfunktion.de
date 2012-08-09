@@ -20,11 +20,12 @@ To change the default tagline, edit the file 'header.php' (line 29). It will be 
 Flickr & Twitter compatibility
 ------------------------------
 
-By default, the theme is shipped with my Flickr & Twitter accounts.
+By default, the theme is shipped with Flickr & Twitter support. You need to adjust some files to activate Twitter or Flickr support:
 
-@TODO: Change this:
+* Twitter: In 'footer.php', replace yourusername.json. Also, don't forget to point to your own Twitter URL in 'js/blogger.js' (line 7) 
 
-* Twitter: In 'footer.php', replace rodrigogalindez.json (line 12) with yourusername.json. Also, don't forget to point to your own Twitter URL in 'js/blogger.js' (line 7) 
+
+@TODO: Does this still apply with the current flickr API?
 
 * Flickr: In 'sidebar.php' replace user=27741269%40N00 (line 24) with your unique string. You can generate this string by loading this page: http://www.flickr.com/badge.gne and generating a simple HTML badge. In the last step, where the source code is generated, copy the string where it says "user=" and replace with the shipped one.
 
