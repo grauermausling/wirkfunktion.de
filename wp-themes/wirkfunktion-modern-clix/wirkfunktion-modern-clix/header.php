@@ -16,16 +16,25 @@
 
 <body>
 	<div id="wrapper">
-		<div id="main-nav" class="col span-12">
-			<ul>
-				<li 
-				  class="page_item page-item-2 <?php if(is_home()){echo 'current_page_item';}?>">
-				  <a href="<?php bloginfo('siteurl'); ?>" title="Home">Home</a>
-				</li>        
-				<?php wp_list_pages('&title_li='); ?>
-			</ul>			
-		</div>		
-		
+		<div>
+			<div id="main-nav" class="col span-12">
+				<ul>
+					<li 
+					  class="page_item page-item-2 <?php if(is_home()){echo 'current_page_item';}?>">
+					  <a href="<?php bloginfo('siteurl'); ?>" title="Home">Home</a>
+					</li>        
+					<?php wp_list_pages('&title_li='); ?>
+					<li class="rss">
+						
+					</li>
+				</ul>
+			</div>
+			
+			<div>
+				<a href="<?php bloginfo('rss2_url'); ?>" title="Syndicate this site using RSS"><acronym title="Really Simple Syndication">RSS</acronym> Feed</a>.
+			</div>
+		</div>	
+
 		<div id="header" class="col last span-12">
 			<h1><a href="<?php bloginfo('url'); ?>">public boolean wirkFunktion (int quotient)</a></h1>
 			<h2>&nbsp;&nbsp;{ return quotient < 60; }</h2>

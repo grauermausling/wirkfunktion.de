@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+/**
+ * @package WordPress
+ * @subpackage Basis_Theme xHTML5
+ */
+ 
+/**
+ * Theme Name:  wirkfunktion
+ * Theme URI:   http://www.wirkfunktion.de/
+ * Description: Custom wirkfunktion.de theme created from Worpress Basis Theme
+ * Version:     0.1
+ * Author:      Alexander Schmitt
+ * Author URI:  http://www.wirkfunktion.de/
+ * Tags:        threaded-comments, sticky-post, black, blue, white, two-columns, fixed-width, translation-ready
+ * License:     GNU General Public License (GPL) version 3
+ * License URI: license.txt
+ * last Date:   21.08.2012
+ */
+
+@import url(layout/css/style.css);
