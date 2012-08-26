@@ -53,9 +53,12 @@ html {
 
 body {
 font-family: Courier, "Lucida Console","Courier New", Sans-Serif;
+font-size: 90%;
+color: #222;
 }
 
 p {
+margin-bottom: 0.7em;
 }
 
 h1 {
@@ -68,10 +71,32 @@ h3 {
 }
 
 h4, h5, h6 {
+
+}
+
+h6 {
+font-size: 0.7em;
+font-weight: normal;
 }
 
 h1, h2, h3, h4 {
 }
+
+h6:before {
+content: "/** ";
+}
+h6:after {
+content: "\00A0*/";
+}
+
+h6 ul {
+list-style-type: none;
+}
+
+h6 ul li:before {
+content: "\00A0* ";
+}
+
 
 blockquote p:before {
 }
@@ -87,9 +112,18 @@ blockquote p:after {
 }
 
 input, textarea, select, option {
+font-family: Courier, "Lucida Console","Courier New", Sans-Serif;
 background: transparent;
 font-size: 100%;
 border: 1px solid #ccc;
+}
+
+.left {
+float: left;
+}
+
+.right {
+float: right;
 }
 
 fieldset, legend {
@@ -105,22 +139,13 @@ border: none;
 }
 
 #header h1:before {
-content: "public class ";
+content: "public blog ";
 }
 #header h1:after {
 content: "()";
 }
 #header h6 {
-color: #7F7F9F;
-}
-#header h6:before {
-content: "/** ";
-}
-#header h6:after {
-content: "\00A0*/";
-}
-#header h6 ul li:before {
-content: "\00A0* ";
+color: #3F5FBF;
 }
 
 /**
@@ -133,12 +158,19 @@ float: left;
 font-size: 1em;
 margin: 5px;
 padding: 15px;
-line-height: 1.5em;
+line-height: 1.2em;
 }
 
 #content header {
-margin-top: 1em;
-margin-bottom: 1em;
+margin-bottom: 0.7em;
+}
+
+#content header h6 {
+color: #3F7F5F;
+} 
+
+#content a:link, p a:visited {
+font-weight: bold;	
 }
 
 .post p{
@@ -151,16 +183,47 @@ list-style-type: none;
 
 .story li {
 margin: 0 0 1em 0;
-padding-left: 20px;
 line-height: 1.2em;
-background: transparent url(bullet.gif) no-repeat left center;*/
+}
+
+.story li:before {
+content: "\00BB \0020";
+}
+
+.storymarker {
+font-weight: bold;
+font-size: 1.2em;
+margin-top: 0.2em;
+display: inline;
+}
+
+.storyend {
+margin-bottom: 1em;
+}
+
+.singlelinecomment {
+color: #3F7F5F;
+display: inline;
+font-size: 0.7em;
+}
+
+.singlelinecomment:before {
+content: "// ";
 }
 
 .info p {
 font-size: 0.7em;
 line-height: 1em;
 margin-top: 1em;
-margin-bottom: 4em;
+margin-bottom: 2em;
+}
+
+.navigation {
+margin: 0 0 1em 0;
+padding: 1em 0 0 0;
+list-style-type: none;
+overflow: hidden;
+clear: both;
 }
 
 /**
@@ -173,7 +236,7 @@ background:-webkit-linear-gradient(left, #413f3b, #57544c);
 background:linear-gradient(left, #413f3b, #57544c);
 top: 0;
 right: 0px;
-width: 250px;
+width: 230px;
 height: 100%;
 position: fixed;
 padding: 20px;
@@ -195,17 +258,17 @@ list-style-position: inside;
 }
 
 #sidebar a:link, #sidebar a:visited {
-font-weight: normal;
+
 color: #dfdbd2;
 }
 
 #sidebar a:hover, #sidebar a:active {
-background-color: #968b2f;
+background-color: #976f20;
 }
 
 #sidebar input {
 color: #dfdbd2;
-width: 200px;
+width: 190px;
 padding: 6px 6px 6px 28px;
 background: transparent url(search16.png) no-repeat 6px center;
 }
@@ -237,10 +300,34 @@ padding: 10px;
  */
 a:link, a:visited {
 text-decoration: none;
-font-weight: bold;
 color: #000;	
 }
 
 a:hover, a:active {
-background-color: #fce94f;
+background-color: #d8b165;
+}
+
+
+/**
+ * @section layout
+ * @css-for (flickr)
+ */
+#flickr_badge_wrapper {
+margin-left: -1em;
+margin-top: 0.5em;
+overflow: hidden;
+}
+
+.flickr_badge_image {
+margin: 0 0 1.2em 1.2em;
+float: left;
+}
+
+.flickr_badge_image img { 
+width: 64px;
+height: 64px;
+}
+
+.flickr_badge_image a {
+display: block;
 }

@@ -9,14 +9,18 @@ get_header();
 	if ( have_posts() ) {
 		while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			<header>
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			</header>
+			<section class="story">
 				<?php the_content(); ?>
-			<section>
-				<?php wp_link_pages(); ?>
-			</section>
-			<section class="info">
-				<p><?php _e('Aktualisiert am', FB_BASIS_TEXTDOMAIN); ?> <time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_modified_date(); ?></time> <?php edit_post_link(__('Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?></p>
-				<p><?php the_tags() ?></p>
+				<section>
+					<?php wp_link_pages(); ?>
+				</section>
+				<section class="info">
+					<p><?php _e('Aktualisiert am', FB_BASIS_TEXTDOMAIN); ?> <time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_modified_date(); ?></time> <?php edit_post_link(__('Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?></p>
+					<p><?php the_tags() ?></p>
+				</section>
 			</section>
 		</article>
 		

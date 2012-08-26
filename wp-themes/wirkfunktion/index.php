@@ -29,7 +29,13 @@ get_header();
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<header>
+					<h6><ul>
+						<li>@author: <?php the_author_posts_link(); ?></li>
+						<li>@since&nbsp;: <time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?>T<?php the_time('H:i'); ?></time></li>
+						<li>@see&nbsp;&nbsp;&nbsp;: <?php the_category(', '); ?></li>											
+					</ul></h6>
 					<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+					<div class="storymarker storybegin">{</div>
 				</header>
 				
 				<section class="story">
@@ -45,33 +51,23 @@ get_header();
 					<section>
 						<?php wp_link_pages(); ?>
 					</section>
-					<section class="info">
-						<p>
-							<time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?>T<?php the_time('H:i'); ?></time>
-							|
-							<?php comments_number('Keine Kommentare','Ein Kommentar','% Kommentare'); ?>													
-							<?php edit_post_link(__('&nbsp;|&nbsp;Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?>
-						</p>
+					<section class="info">						
 					</section>
-				<?php } ?>
+				<?php } ?>				
 				</section>
-			
+				<ul class="storyend">
+					<li class="storymarker">}</li>
+					<li class="singlelinecomment">Ende von <?php the_title(); ?>, <?php comments_number('Keine Kommentare','Ein Kommentar','% Kommentare'); ?><?php edit_post_link(__(', Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?></li>
+				</ul>							
 			</article>
 		
-		<?php
-		endwhile;
-		
-		if ( $wp_query->max_num_pages > 1 ) {
-			echo '<nav class="meta-nav">' . "\n";
-			echo '<h3>' . __( 'Posts Links Navigation', FB_BASIS_TEXTDOMAIN ) . '</h3>' . "\n";
-			echo '<p>';
-			next_posts_link( __( '<span>&larr;</span> Older posts', FB_BASIS_TEXTDOMAIN ) );
-			echo ' &middot; ';
-			previous_posts_link( __( 'Newer posts <span>&rarr;</span>', FB_BASIS_TEXTDOMAIN ) );
-			echo '</p>' . "\n";
-			echo '</nav>' . "\n";
-		}
-	
+		<?php endwhile;?>
+				
+		<ul class="navigation">
+			<li class="left"><?php next_posts_link('&larr; Ältere Artikel') ?></li>
+			<li class="right"><?php previous_posts_link('Neuere Artikel &rarr;') ?></li>
+		</ul>					
+	<?php
 	} else {
 	?>
 		
