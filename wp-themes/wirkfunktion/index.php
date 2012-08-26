@@ -45,6 +45,14 @@ get_header();
 					<section>
 						<?php wp_link_pages(); ?>
 					</section>
+					<section class="info">
+						<p>
+							<time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?>T<?php the_time('H:i'); ?></time>
+							|
+							<?php comments_number('Keine Kommentare','Ein Kommentar','% Kommentare'); ?>													
+							<?php edit_post_link(__('&nbsp;|&nbsp;Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?>
+						</p>
+					</section>
 				<?php } ?>
 				</section>
 			

@@ -117,8 +117,15 @@ list-style-type: none;
 .story li {
 margin: 0 0 1em 0;
 padding-left: 20px;
-line-height: 1.2;
+line-height: 1.2em;
 background: transparent url(bullet.gif) no-repeat left center;
+}
+
+.info p {
+font-size: 0.7em;
+line-height: 1em;
+margin-top: 1em;
+margin-bottom: 4em;
 }
 
 /**
@@ -164,5 +171,5 @@ color: #000;
 }
 
 a:hover, a:active {
-color: #5f4141;
+background-color: #fce94f;
 }
