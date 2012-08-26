@@ -157,15 +157,44 @@ margin-bottom: 4em;
  * @css-for (sidebar)
  */
 aside {
-background: #fff;
-color: #111;
-width: 25%;
-float: right;
-margin: 5px;
-padding: 5px;
+background: #46443f;
+background:-webkit-linear-gradient(left, #413f3b, #57544c);
+background:linear-gradient(left, #413f3b, #57544c);
+top: 0;
+right: 0px;
+width: 250px;
+height: 100%;
+position: fixed;
+padding: 20px;
 }
 
 #sidebar {
+color: #dfdbd2;
+font-size: 1em;
+}
+
+#sidebar ul {
+list-style-type: none;
+margin-top: 0.2em;
+}
+
+#sidebar ul li ul {
+list-style-type: square;
+list-style-position: inside;
+}
+
+#sidebar a:link, #sidebar a:visited {
+font-weight: normal;
+color: #dfdbd2;
+}
+
+#sidebar a:hover, #sidebar a:active {
+background-color: #968b2f;
+}
+
+.widget {
+margin-bottom: 0.5em;
+margin-top: 0.5em
 }
 
 /**
