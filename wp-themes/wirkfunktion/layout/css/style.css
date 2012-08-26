@@ -176,9 +176,25 @@ font-weight: bold;
 .post p{
 }
 
+.post pre {
+margin: 0 0 1em 0;
+padding: 2em;
+background: #eee;
+overflow: auto;
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;       /* Opera 4-6 */
+white-space: -o-pre-wrap;       /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 .story ul {
 margin-top: 1em;
 list-style-type: none;
+}
+
+.story ol {
+margin-left: 2em;
 }
 
 .story li {
@@ -186,7 +202,7 @@ margin: 0 0 1em 0;
 line-height: 1.2em;
 }
 
-.story li:before {
+.story ul li:before {
 content: "\00BB \0020";
 }
 
