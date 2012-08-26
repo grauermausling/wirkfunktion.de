@@ -86,6 +86,17 @@ blockquote p:after {
 #wrap {
 }
 
+input, textarea, select, option {
+background: transparent;
+font-size: 100%;
+border: 1px solid #ccc;
+}
+
+fieldset, legend {
+background: transparent;
+border: none;
+}
+
 /**
  * @section layout
  * @css-for (header)
@@ -190,6 +201,13 @@ color: #dfdbd2;
 
 #sidebar a:hover, #sidebar a:active {
 background-color: #968b2f;
+}
+
+#sidebar input {
+color: #dfdbd2;
+width: 200px;
+padding: 6px 6px 6px 28px;
+background: transparent url(search16.png) no-repeat 6px center;
 }
 
 .widget {
