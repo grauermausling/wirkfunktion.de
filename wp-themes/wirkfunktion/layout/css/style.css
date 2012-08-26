@@ -93,6 +93,22 @@ blockquote p:after {
 #header {
 }
 
+#header h1:before {
+content: "public class ";
+}
+#header h1:after {
+content: "()";
+}
+#header h6 {
+color: #7F7F9F;
+}
+#header h6:before {
+content: "/** ";
+}
+#header h6:after {
+content: " */";
+}
+
 /**
  * @section layout
  * @css-for (content)
@@ -100,10 +116,15 @@ blockquote p:after {
 #content {
 width: 65%;
 float: left;
-font-size: 1.1em;
+font-size: 1em;
 margin: 5px;
 padding: 15px;
 line-height: 1.5em;
+}
+
+#content header {
+margin-top: 1em;
+margin-bottom: 1em;
 }
 
 .post p{

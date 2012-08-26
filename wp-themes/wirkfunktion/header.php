@@ -46,14 +46,13 @@
 <?php flush(); ?>
 <body <?php if (function_exists('body_class') ) body_class(); ?>>
 	
-<div id="wrap">
-	
-	<a id="skipLink" title="<?php _e('Direkt zum Beitrag; Tastaturkuerzel 0', FB_BASIS_TEXTDOMAIN); ?>" href="#content"><?php _e('&raquo; Direkt zum Beitrag', FB_BASIS_TEXTDOMAIN); ?></a>
+<div id="wrap">		
 	
 	<header id="header">
 		<hgroup>
-			<h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
+			
 			<h6><?php bloginfo('description'); ?></h6>
+			<h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>						
 		</hgroup>
 	</header>
 
