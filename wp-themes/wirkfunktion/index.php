@@ -34,9 +34,12 @@ get_header();
 						<li>@since&nbsp;: <time datetime="<?php the_modified_date('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?>T<?php the_time('H:i'); ?></time></li>
 						<li>@see&nbsp;&nbsp;&nbsp;: <?php the_category(', '); ?></li>											
 					</ul></h6>
-					<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-					<div class="storymarker storybegin">{</div>
+					<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>					
 				</header>
+				
+				<ul class="storybegin">
+					<li class="storymarker">{</li>
+				</ul>
 				
 				<section class="story">
 				<?php if ( is_archive() || is_search() ) { ?>
@@ -55,6 +58,7 @@ get_header();
 					</section>
 				<?php } ?>				
 				</section>
+				
 				<ul class="storyend">
 					<li class="storymarker">}</li>
 					<li class="singlelinecomment">Ende von <?php the_title(); ?>, <?php comments_number('Keine Kommentare','Ein Kommentar','% Kommentare'); ?><?php edit_post_link(__(', Editieren', FB_BASIS_TEXTDOMAIN),' &middot; ', ''); ?></li>

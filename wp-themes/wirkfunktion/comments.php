@@ -40,7 +40,7 @@ if ( have_comments() ) { ?>
 	$comments_by_type = separate_comments($comments);
 	if ( !empty($comments_by_type['comment']) && function_exists( 'fb_comment_type_count' ) ) { ?>
 		<header>
-			<h2 class="comments"><?php fb_comment_type_count( 'comment' ); ?></h2>
+			<h3 class="comments"><?php fb_comment_type_count( 'comment' ); ?></h3>
 		</header>
 		<ol class="commentlist">
 			<?php wp_list_comments( 'type=comment&callback=fb_theme_comment' ); ?>
@@ -88,9 +88,6 @@ if ( have_comments() ) { ?>
 
 <?php if ('open' == $post->comment_status) : ?>
 <section id="respond">
-	<header>
-		<h2 id="postcomment"><?php _e('Schreibe einen Kommentar', FB_BASIS_TEXTDOMAIN); ?></h2>
-	</header>
 	<?php if ( function_exists('cancel_comment_reply_link') ) { ?>
 	<div id="cancel-comment-reply">
 		<small><?php cancel_comment_reply_link( __( 'Hier klicken um die Antwort abzubrechen.', FB_BASIS_TEXTDOMAIN ) );?></small>
