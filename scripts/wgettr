@@ -1,0 +1,11 @@
+#! /bin/bash
+
+if test $# -ne 1; then
+  echo "Usage: wgettr URL"
+  exit 1
+fi
+
+filename=$(basename $1)
+if wget -O $filename -U "QuickTime/7.6.2" $1; then
+  ffmpeg -i $filename -c copy $filename.mp4 && rm $filename
+fi
